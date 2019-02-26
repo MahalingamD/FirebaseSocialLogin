@@ -12,16 +12,32 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
-        debug{
+        debug {
             debuggable true
             minifyEnabled false
+
+           // buildConfigField "String", "facebook_id", "2322018984695039"
+            resValue "string", "FACEBOOK_APP_ID", "2322018984695039"
+
+            resValue "string", "twitter_id", "bVYl0uGu79xY8nd86RY7APUzv"
+            resValue "string", "twitter_sec_id", "s5BsWT7sdV1Nr2vZKWYlfpCpDnHP2QePQl0mPapOyDyhxMypL5"
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //buildConfigField "String", "facebook_id", "2322018984695039"
+            resValue "string", "FACEBOOK_APP_ID", "2322018984695039"
+            resValue "string", "twitter_id", "bVYl0uGu79xY8nd86RY7APUzv"
+            resValue "string", "twitter_sec_id", "s5BsWT7sdV1Nr2vZKWYlfpCpDnHP2QePQl0mPapOyDyhxMypL5"
         }
-        staging{
+        staging {
             debuggable true
+
+          //  buildConfigField "String", "facebook_id", "2322018984695039"
+            resValue "string", "FACEBOOK_APP_ID", "2322018984695039"
+            resValue "string", "twitter_id", "bVYl0uGu79xY8nd86RY7APUzv"
+            resValue "string", "twitter_sec_id", "s5BsWT7sdV1Nr2vZKWYlfpCpDnHP2QePQl0mPapOyDyhxMypL5"
         }
     }
 }

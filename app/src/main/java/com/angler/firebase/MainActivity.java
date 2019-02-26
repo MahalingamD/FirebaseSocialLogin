@@ -99,8 +99,8 @@ public class MainActivity extends Activity {
    private void twitterInit() {
       // Configure Twitter SDK
       TwitterAuthConfig authConfig = new TwitterAuthConfig(
-              getString( R.string.twitter_consumer_key ),
-              getString( R.string.twitter_secret_key ) );
+              getString( R.string.twitter_id ),
+              getString( R.string.twitter_sec_id ) );
 
       TwitterConfig twitterConfig = new TwitterConfig.Builder( this )
               .twitterAuthConfig( authConfig )
@@ -188,9 +188,6 @@ public class MainActivity extends Activity {
          } catch( ApiException e ) {
             // Google Sign In failed, update UI appropriately
             Log.w( TAG, "Google sign in failed", e );
-            // [START_EXCLUDE]
-            //  updateUI(null);
-            // [END_EXCLUDE]
          }
       } else if( requestCode == TwitterAuthConfig.DEFAULT_AUTH_REQUEST_CODE ) {
          TWLoginButton.onActivityResult( requestCode, resultCode, data );
